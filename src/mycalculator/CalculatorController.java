@@ -40,25 +40,10 @@ public class CalculatorController implements ActionListener{
             System.out.println("clicked");
             //System.out.println(e.getSource());
             System.out.println(((JButton)e.getSource()).getName());
-
             String keytext=view.getText(((JButton)e.getSource()).getName());
-            model.addtoinput(keytext);
+            model.processinputsignal(keytext);
+            view.updateresultdisplay(model.getresult());
             view.updateinputdisplay(model.getinput());
-            switch(keytext)
-            {
-                case "0":
-                case "1":
-                case "2":
-                case "3":
-                case ".":
-                    model.addtooperand(keytext);
-                    break;
-
-                default:
-                    model.calculate(keytext);
-                    view.updateresultdisplay(model.getresult());
-                    break;
-            }
 
 
         }

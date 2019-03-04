@@ -13,7 +13,6 @@ public class mycalculator {
     static CalculatorController controller;
 
     public static void main(String[] args) {
-
         model= new CalculatorModel();
         view = new CalculatorView();
         controller = new CalculatorController(model, view);
@@ -24,7 +23,7 @@ public class mycalculator {
 
 /*
 * This is the starter code made by Dr. S. Zhang for his CSCI 311 students.
-* Using MVC design pattern
+* Using MVC design pattern and finite state machine
 * What you need to do
 * Test the current solution, find any bugs (comparing with standard calculator)
 * Fix the bugs
